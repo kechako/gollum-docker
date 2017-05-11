@@ -2,7 +2,7 @@ require 'omnigollum'
 require 'omniauth-slack'
 
 wiki_options = {
-  live_preview: true,
+  live_preview: false,
   allow_uploads: true,
   allow_editing: true,
 }
