@@ -1,6 +1,13 @@
 require 'omnigollum'
 require 'omniauth-slack'
 
+wiki_options = {
+  live_preview: true,
+  allow_uploads: true,
+  allow_editing: true,
+}
+Precious::App.set(:wiki_options, wiki_options)
+
 options = {
   providers: Proc.new do
     provider :slack, ENV['SLACK_CLIENT_ID'], ENV['SLACK_CLIENT_SECRET'], scope: 'identity.basic,identity.email,identity.team', team: ENV['SLACK_TEAM']
