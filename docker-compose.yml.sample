@@ -1,0 +1,13 @@
+version: '2'
+services:
+  gollum:
+    image: gollum
+    ports:
+      - "80:80"
+    volumes:
+      - ./wiki:/gollum/wiki
+    environment:
+      SLACK_CLIENT_ID:
+      SLACK_CLIENT_SECRET:
+      SLACK_TEAM:
+    restart: always
