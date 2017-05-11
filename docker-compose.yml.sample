@@ -1,7 +1,7 @@
 version: '2'
 services:
   gollum:
-    image: gollum
+    image: kechako/gollum
     ports:
       - "80:80"
     volumes:
